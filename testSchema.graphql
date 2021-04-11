@@ -1,0 +1,44 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  totalPhotos: Int!
+  allPhotos: [Photo!]!
+}
+
+type Mutation {
+  postPhoto(input: PostPhotoInput!): Photo!
+}
+
+input PostPhotoInput {
+  name: String!
+  description: String
+  category: PhotoCategory = PORTRAIT
+}
+
+type User {
+  githubLogin: ID!
+  name: String
+  avatar: String
+  postedPhotos: [Photo!]!
+}
+
+type Photo {
+  id: ID!
+  name: String!
+  url: String!
+  description: String
+  category: PhotoCategory!
+  postedBy: User!
+  githubUser: String!
+}
+
+enum PhotoCategory {
+  SELFIE
+  PORTRAIT
+  ACTION
+  LANDSCAPE
+  GRAPHIC
+}

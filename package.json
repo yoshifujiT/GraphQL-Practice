@@ -1,0 +1,36 @@
+{
+  "name": "graphql-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "graphql:codegen": "graphql-codegen --config codegen.yml",
+    "graphql:codegen:watch": "graphql-codegen -w --config ./codegen.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshifujiT/GraphQL-Practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoshifujiT/GraphQL-Practice/issues"
+  },
+  "homepage": "https://github.com/yoshifujiT/GraphQL-Practice#readme",
+  "description": "",
+  "dependencies": {
+    "@graphql-codegen/cli": "^1.21.3",
+    "@graphql-codegen/typescript": "^1.21.1",
+    "@graphql-codegen/typescript-operations": "^1.17.15",
+    "@graphql-codegen/typescript-resolvers": "^1.19.0",
+    "apollo-server": "^2.22.2",
+    "graphql": "^15.5.0",
+    "graphql-import": "^1.0.2",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1"
+  }
+}
